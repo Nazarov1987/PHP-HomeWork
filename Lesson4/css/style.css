@@ -1,0 +1,26 @@
+.text{
+	text-align: center;
+}
+.library{
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	width: 790px;
+}
+.library li{
+	border: 1px solid black;
+	list-style-type: none;
+	padding:5px;
+}
+.book{
+	width: 250px;
+	height: 150px;
+}
+.name{
+	
+	color: green;
+}
+.author{
+	color: red;
+	font-style:italic;
+}
