@@ -6,6 +6,7 @@
 	display: flex;
 	flex-wrap: wrap;
 	width: 790px;
+	
 }
 .library li{
 	border: 1px solid black;
@@ -17,10 +18,13 @@
 	height: 150px;
 }
 .name{
-	
 	color: green;
 }
 .author{
 	color: red;
 	font-style:italic;
+}
+
+.view{
+	color: black;
 }
