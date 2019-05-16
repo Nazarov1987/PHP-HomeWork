@@ -1,16 +1,17 @@
 <?php
+
 require 'db.php';
+
+require 'templates/header.php';
+
+require 'public/index-main.php';
+
+require 'templates/modal.php';
+
+require 'templates/footer.php';
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-    <link type="text/css" rel="StyleSheet" href="css/style.css" />
 
-</head>
-<body>
    <h1 class="text">The best books in the genre of fantasy:</h1>
     <ul class="library">
         <?php foreach($result as $image): ?>
@@ -22,5 +23,11 @@ require 'db.php';
         </li>
         <?php endforeach;?>    
      </ul>
-</body>
-</html>
+
+
+<button type="button" class="ml-3 mb-3 btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    Добавить комментарий
+</button>
+
+
+<? var_dump($_POST);?> 
