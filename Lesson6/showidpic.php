@@ -13,7 +13,7 @@ $sqlnewopen = "UPDATE gallery SET open = open+1 WHERE id=";
 while($row = mysqli_fetch_assoc($result)) {
 	$sqlresult = mysqli_query($mysqli, $sqlnewopen.$id);
 	$fullimages = $row['address'].'\\\\'.$row['name'];
-	$content = '<img src="'.$fullimages.'" alt="pic"/>';
+	$content = '<img src="'.$fullimages.'" alt="pic"/> <h3 class="add">Мировые шедевры жанра фэнтази</h3>';
 	$title = 'picture id='.$id;
 }
 mysqli_close($mysqli);

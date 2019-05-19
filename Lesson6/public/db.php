@@ -1,6 +1,6 @@
 <?php
 
-require 'connection.php';
+require './connection.php';
 
 $query = mysqli_query($mysqli, "SELECT * FROM gallery ORDER BY gallery.open DESC");
 $sqlnewview = "UPDATE gallery SET view = view+1 WHERE id=";
