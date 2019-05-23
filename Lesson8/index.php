@@ -16,7 +16,8 @@ require 'templates/footer.php';
              <a href=./showidpic.php?id=<?=$image['id']?>&db=gallery target="_blank"><img class="book" src="<?=$image['address']?>/<?=$image['name']?>" alt=""/></a>
              <h3 class="author"> <? echo $image['author'] ?></h3>
              <h4 class="name" > <? echo $image['name_book'] ?></h4>
-             <h5 class="view" > Изображение открыто: <? echo $image['open'] ?> раз</h5>     
+             <button class="buyBook">Купить</button>
+             <h6 class="view" > Изображение открыто: <? echo $image['open'] ?> раз</h6>     
         </li>
         <?php endforeach;?>  
         <h3 class="see"> Страница просмотрена: <? echo $image['view'] ?> раз</h3>  
