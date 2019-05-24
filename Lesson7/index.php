@@ -3,12 +3,14 @@ require 'public/db.php';
 
 require 'templates/header.php';
 
+require 'public/auth_check.php';
+
 require 'templates/modal.php';
 
 require 'templates/footer.php';
 ?>
- 
-  <h1 class="text">The best books in the genre of fantasy:</h1>
+ <div class="fon">
+  <h1 class="text">Лучшие книги в жанре фэнтези:</h1>
 
     <ul class="library">
         <?php foreach($result as $image): ?>
@@ -31,10 +33,11 @@ require 'templates/footer.php';
 
 <?php require 'public/seecomment.php';?>
 
-<div class="commentUsers">
-	<h3 class="add">Комментарии пользователей:</h3>
-	<?php foreach($com as $review): ?>
-	<h4> <? echo $review['name'] ?> </h4>
-	<h5> <? echo $review['comment'] ?> </h5>
-	<?php endforeach;?> 	
+	<div class="commentUsers">
+		<h3 class="add">Комментарии пользователей:</h3>
+		<?php foreach($com as $review): ?>
+		<h4> <? echo $review['name'] ?> </h4>
+		<h5> <? echo $review['comment'] ?> </h5>
+		<?php endforeach;?> 	
+	</div>
 </div>

@@ -1,4 +1,10 @@
+.fon{
+	background-image: url(/lesson7/img/start_web.jpg);
+	height: inherit;
+}
 .text{
+	text-shadow: black 0 0 6px;
+	color: white;
 	text-align: center;
 }
 .library{
@@ -21,15 +27,18 @@
 	height: 150px;
 }
 .name{
+	text-shadow: black 0 0 2px;
 	color: green;
 }
 .author{
+	text-shadow: black 0 0 2px;
 	color: red;
 	font-style:italic;
 }
 
 .view{
-	color: black;
+	text-shadow: black 0 0 4px;
+	color: white;
 }
 .add{
 	text-align: center;

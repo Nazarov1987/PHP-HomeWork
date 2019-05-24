@@ -1,14 +1,12 @@
 <?php
-require './connection.php';
-require '/public/auth_user.php';
-require '/public/login.php';
-require '/templates/header.php';
-
+require '../connection.php';
+require '../public/auth_user.php';
+require '../public/login.php';
+require 'header.php';
 ?>
 
-    <div class="container  ">
+    <div class="container">
         <div class="row d-flex justify-content-center">
-
             <div class="col-md-6 ">
                 <form class="form-horizontal" method="post">
                     <span class="heading">АВТОРИЗАЦИЯ</span>
@@ -32,12 +30,11 @@ require '/templates/header.php';
                     </div>
                 </form>
             </div>
-
         </div>
-
+	</div>
 
 <?php
-require ROOT_DIR.'templates/footer.php';
+require 'footer.php';
 ?>
 
 
