@@ -1,0 +1,81 @@
+.header{
+background-color: beige;
+}
+.header a{
+	color: red;
+}
+
+.fon{
+	background-image: url(../img/start_web.jpg);
+	height: inherit;
+}
+.text{
+	text-shadow: black 0 0 6px;
+	color: white;
+	text-align: center;
+}
+.library{
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	width: 900px;
+	
+}
+.library li{
+	width: 280px;
+	border: 1px solid black;
+	list-style-type: none;
+	padding: 3px;
+}
+
+.book{
+	margin-left: 10px;
+	width: 250px;
+	height: 150px;
+}
+.name{
+	text-shadow: black 0 0 2px;
+	color: green;
+}
+.author{
+	text-shadow: black 0 0 2px;
+	color: red;
+	font-style:italic;
+}
+
+.view{
+	text-shadow: black 0 0 4px;
+	color: white;
+}
+.add{
+	text-align: center;
+}
+#addCommit{
+	background-color: chocolate;
+}
+.see{
+	margin-left: 180px;
+}
+.view,
+.author,
+.name{
+	text-align: center;
+}
+.commentUsers{
+	margin: 0 auto;
+	border: 1px solid chocolate;
+	width: 900px;
+	margin-bottom: 10px;
+	padding: 10px;
+}
+.commentUsers h4{
+	color: red;
+}
+.buyBook{
+	margin-left: 100px;
+	
+	padding: 3px;
+	background-color: red;
+}
+
+
