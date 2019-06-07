@@ -2,7 +2,7 @@
 
 namespace app\model;
 
-class Authorization extends Model
+class Authorization extends DbModel
 {
     public $id;
     public $login;
@@ -10,12 +10,11 @@ class Authorization extends Model
 
         public function __construct($login = null, $pass = null)
     {
-        parent::__construct();
         $this->login = $login;
         $this->pass = $pass;
     }
     
-    public function getTableName() {
+    public static function getTableName() {
         return 'authorization';
     }
 
