@@ -1,12 +1,19 @@
 .header{
-background-color: beige;
+	margin: 0 auto;
+	background-color: beige;
+	height: 100px;
+	text-align: center;
+	padding-top: 2em;
 }
 .header a{
+	padding-right: 20px;
+	
 	color: red;
 }
 
 .fon{
 	background-image: url(../img/start_web.jpg);
+	margin-top: -80px;
 	height: inherit;
 }
 .text{
@@ -42,6 +49,10 @@ background-color: beige;
 	color: red;
 	font-style:italic;
 }
+.price{
+	color: black;
+	text-shadow: black 0 0 2px;
+}
 
 .view{
 	text-shadow: black 0 0 4px;
@@ -58,7 +69,8 @@ background-color: beige;
 }
 .view,
 .author,
-.name{
+.name,
+.price{
 	text-align: center;
 }
 .commentUsers{

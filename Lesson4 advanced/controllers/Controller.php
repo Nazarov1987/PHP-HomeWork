@@ -9,11 +9,6 @@ abstract class Controller
     private $layout = 'main';
     private $useLayout = true;
 
-    public function actionIndex()
-    {
-        echo $this->render('index');
-    }
-
     public function runAction($action = null)
     {
         $this->action = $action ?: $this->defaultAction;

@@ -5,14 +5,13 @@
     <ul class="library">
         <?php foreach($gallery as $image): ?>
         <li >
-             <img src=".<?$image['address']?>/<?$image['name']?>" class="pimg" />
+             <img src="../public/img/<? echo $image['address']?>/<? echo $image['name']?>" class="pimg" />
              <h3 class="author"> <? echo $image['author'] ?></h3>
              <h4 class="name" > <? echo $image['name_book'] ?></h4>
-             <p>Стоимость: <? echo $image['price']?></p>
+             <p class="price">Стоимость: <? echo $image['price']?></p>
              <button class="buyBook">Купить</button>
         </li>
         <?php endforeach;?>  
      </ul>
 <hr>
-
 </div>

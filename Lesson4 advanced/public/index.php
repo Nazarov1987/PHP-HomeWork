@@ -6,6 +6,7 @@ require "../config/config.php";
 use app\model\Gallery;
 use app\engine\Autoload;
 use app\model\Authorization;
+use app\model\Basket;
 
 spl_autoload_register([new Autoload(), 'loadClass']);
 
