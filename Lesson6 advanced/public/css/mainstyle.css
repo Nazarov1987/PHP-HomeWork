@@ -28,7 +28,13 @@
 	font-weight: 900;
 	color: azure;
 }
-
+.basket {
+	padding-top: 15px;
+	font-size: 30px;
+	font-weight: 900;
+	color: azure;
+	text-align: center;
+}
 .best {
 	padding-top: 200px;
 	padding-left: 350px;
@@ -38,7 +44,7 @@
 }
 
 .fon {
-	background-image: url(../img/start_web.jpg);
+	background-image: url(../img/start_web.JPG);
 	margin-top: -80px;
 	height: inherit;
 	padding-bottom: 50px;
@@ -137,13 +143,22 @@
 .commentUsers h4 {
 	color: red;
 }
-
-.buyBook {
+.delete{
+	margin-left: 635px;
+	padding: 3px;
+	background-color: red;
+}
+.action {
 	margin-left: 100px;
 	padding: 3px;
 	background-color: red;
 }
 
+.action_one {
+	margin-left: 635px;
+	padding: 3px;
+	background-color: red;
+}
 .still {
 	padding: 20px 400px;
 }
@@ -153,7 +168,7 @@
 	font-size: 24px;
 	font-weight: 700;
 	text-decoration: none;
-	color: white;
+	color: black;
 }
 
 .main {
