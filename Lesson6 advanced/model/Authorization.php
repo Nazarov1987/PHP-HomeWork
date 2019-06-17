@@ -21,7 +21,7 @@ class Authorization extends DbModel
     
 	public static function auth($login, $pass) {
         $user = static::getOneWhere('login', $login);
-var_dump($user);
+
 
         if ($pass == $user->pass) {
             $_SESSION['login'] = $login;

@@ -1,12 +1,13 @@
 .header {
 	margin: 0 auto;
 	background-color: beige;
-	height: 100px;
+	height: inherit;
 	text-align: center;
-	padding-top: 2em;
+
 }
 
 .header a {
+	padding-top: 10px;
 	padding-right: 20px;
 	font-size: 24px;
 	font-weight: 700;
@@ -14,16 +15,20 @@
 	color: red;
 }
 
+#count{
+	color: darkcyan;
+	font-size: 24px;
+	font-weight: 700;
+}
 .fonMain {
 	background-image: url(../img/start_web2.jpg);
-	margin-top: -80px;
-	height: 430px;
+	height: 395px;
 	padding-bottom: 50px;
 }
 
 .hi {
 	padding-top: 200px;
-	padding-left: 350px;
+	padding-left: 250px;
 	font-size: 50px;
 	font-weight: 900;
 	color: azure;
@@ -45,7 +50,6 @@
 
 .fon {
 	background-image: url(../img/start_web.JPG);
-	margin-top: -80px;
 	height: inherit;
 	padding-bottom: 50px;
 }
@@ -144,12 +148,10 @@
 	color: red;
 }
 .delete{
-	margin-left: 635px;
 	padding: 3px;
 	background-color: red;
 }
 .action {
-	margin-left: 100px;
 	padding: 3px;
 	background-color: red;
 }
@@ -173,4 +175,12 @@
 
 .main {
 	margin-top: -230px;
+}
+.authUser{
+	color: green;
+	font-size: 24px;
+	font-weight: 700;
+}
+.authForm{
+	padding: 15px 0;
 }

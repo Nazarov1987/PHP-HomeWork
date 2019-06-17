@@ -23,6 +23,11 @@ abstract class Controller
         $this->renderer = $renderer;
     }
 	
+	    public function actionIndex()
+    {
+        echo $this->render('index');
+    }
+	
     public function runAction($action = null)
     {
         $this->action = $action ?: $this->defaultAction;
