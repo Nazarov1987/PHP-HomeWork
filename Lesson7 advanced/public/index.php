@@ -5,11 +5,12 @@ require "../config/config.php";
 
 use app\model\Gallery;
 use app\engine\Autoload;
-use app\model\Authorization;
+use app\model\repositories\AuthorizationRepository;
 use app\model\Basket;
 use app\engine\Render;
 use app\engine\Request;
 
+try {
 spl_autoload_register([new Autoload(), 'loadClass']);
 
 $request = new Request();
@@ -24,10 +25,19 @@ if (class_exists($controllerClass)) {
     $controller->runAction($actionName);
 } else {
     echo "404";
+	
+	}
+}catch (\PDOException $e) {
+      var_dump($e);
+}
+
+catch (\Exception $e) {
+    echo $e->getMessage();
+    var_dump($e->getTrace());
 }
 /** @var Products $product */
 
-$authorization = Authorization::getAll();
+$authorization = (new AuthorizationRepository())->getAll();
 //vardump($authorization);
 
 //$gallery->delete();

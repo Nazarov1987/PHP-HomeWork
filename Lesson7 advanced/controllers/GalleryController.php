@@ -2,7 +2,8 @@
 
 namespace app\controllers;
 
-use app\model\Gallery;
+use app\engine\Request;
+use app\model\repositories\GalleryRepository;
 
 class GalleryController extends Controller
 {
@@ -15,7 +16,7 @@ class GalleryController extends Controller
         $page = $_GET['page'] ?? 0;
         $page++;
         $limit = $page * 3;
-        $gallery = Gallery::getLimit(0, $limit);
+        $gallery = (new GalleryRepository())->getLimit(0, $limit);
         echo $this->render(
             'catalog', [
                 'gallery' => $gallery,
@@ -26,8 +27,8 @@ class GalleryController extends Controller
 
     public function actionCard()
     {
-        $id = $_GET['id'];
-        $gallery = Gallery::getOne($id);
+        $id = (new Request())->getParams()['id'];
+        $gallery = (new GalleryRepository())->getOne($id);
         echo $this->render('card', ['gallery' => $gallery]);
     }
 }

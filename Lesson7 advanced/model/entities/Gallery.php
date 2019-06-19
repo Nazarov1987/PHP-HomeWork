@@ -1,8 +1,8 @@
 <?php
 
-namespace app\model;
+namespace app\model\entities;
 
-class Gallery extends DbModel {
+class Gallery extends DataEntity {
 
     public $id;
 	public $name;
@@ -20,11 +20,5 @@ class Gallery extends DbModel {
         $this->name_book = $name_book;
         $this->price = $price;
     }
-
-
-    public static function getTableName() {
-        return 'gallery';
-    }
-
 
 }

@@ -3,8 +3,10 @@
 namespace app\controllers;
 
 use app\interfaces\IRenderer;
-use app\model\Basket;
-use app\model\Authorization;
+use app\model\entities\Basket;
+use app\model\entities\Authorization;
+use app\model\repositories\BasketRepository;
+use app\model\repositories\AuthorizationRepository;
 
 abstract class Controller
 {
@@ -41,9 +43,9 @@ abstract class Controller
         if ($this->useLayout) {
             return $this->renderTemplate(
                 "layouts/{$this->layout}",
-                ['content' => $this->renderTemplate($template, $params),     'count' => Basket::getCountWhere('session_id', session_id()),
-                'auth' => Authorization::isAuth(),
-                'username' => Authorization::getName()]
+                ['content' => $this->renderTemplate($template, $params),     'count' => (new BasketRepository())->getCountWhere('session_id', session_id()),
+                'auth' => (new AuthorizationRepository())->isAuth(),
+                'username' => (new AuthorizationRepository())->getName()]
             );
         } else {
             return $this->renderTemplate($template, $params);
