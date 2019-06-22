@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3307
--- Время создания: Июн 11 2019 г., 22:45
+-- Время создания: Июн 22 2019 г., 08:27
 -- Версия сервера: 5.6.43
 -- Версия PHP: 7.2.10
 
@@ -52,18 +52,9 @@ INSERT INTO `authorization` (`id`, `login`, `pass`) VALUES
 
 CREATE TABLE `basket` (
   `id` int(11) NOT NULL,
-  `login` varchar(128) NOT NULL,
-  `name_book` varchar(128) NOT NULL,
-  `quantity` int(11) NOT NULL,
-  `price` int(11) NOT NULL
+  `session_id` varchar(128) NOT NULL,
+  `product_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Дамп данных таблицы `basket`
---
-
-INSERT INTO `basket` (`id`, `login`, `name_book`, `quantity`, `price`) VALUES
-(1, 'nazarov', '\"The Wizard of Earthsea\"', 1, 1250);
 
 -- --------------------------------------------------------
 
@@ -95,26 +86,6 @@ INSERT INTO `gallery` (`id`, `address`, `name`, `author`, `name_book`, `price`) 
 (10, 'img', 'image8.jpg', 'S. Lukyanenko', '\"Watches\"', 1000),
 (11, 'img', 'image9.jpg', 'N. Perumov', '\"Break Chronicles\"', 1750);
 
--- --------------------------------------------------------
-
---
--- Структура таблицы `review`
---
-
-CREATE TABLE `review` (
-  `id` int(11) NOT NULL,
-  `name` varchar(128) NOT NULL,
-  `comment` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Дамп данных таблицы `review`
---
-
-INSERT INTO `review` (`id`, `name`, `comment`) VALUES
-(74, 'Евгений', 'Ведьмак, одна из лучших фэнтези-саг за всю историю существования жанра. Оригинальное, масштабное эпическое произведение, одновременно и свободное от влияния извне, и связанное с классической мифологической, легендарной и сказовой традицией. '),
-(75, 'Виктория', 'Волкодав. Целый мир Мария Семёнова вложила на листы бумаги. Волкодава я полюбила всем сердцем. Такие мужчины живут только в книгах. Человек Спевший Песнь Смерти, отомстивший за свой род Людоеду, больше ничего не должен жизни... Он перечеркнул свою жизнь и начал новую. Волкодав со своим обострённым чувством справедливости не может пройти мимо чужой беды и позволить обижать слабого. ');
-
 --
 -- Индексы сохранённых таблиц
 --
@@ -138,12 +109,6 @@ ALTER TABLE `gallery`
   ADD PRIMARY KEY (`id`);
 
 --
--- Индексы таблицы `review`
---
-ALTER TABLE `review`
-  ADD PRIMARY KEY (`id`);
-
---
 -- AUTO_INCREMENT для сохранённых таблиц
 --
 
@@ -157,19 +122,13 @@ ALTER TABLE `authorization`
 -- AUTO_INCREMENT для таблицы `basket`
 --
 ALTER TABLE `basket`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT для таблицы `gallery`
 --
 ALTER TABLE `gallery`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
-
---
--- AUTO_INCREMENT для таблицы `review`
---
-ALTER TABLE `review`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=76;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
