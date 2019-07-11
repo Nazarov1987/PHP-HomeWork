@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link type="text/css" rel="stylesheet" href="/css/mainstyle.css">
+    <title>Document</title>
+</head>
+<body>
+<div class="fon">
+     <h1 class="text">Лучшие книги в жанре фэнтези:</h1>
+     <ul class="library">
+      {% for item in gallery %}
+        <li>
+          <img class="book" src="/img/{{ item.name }}"/>
+          <h3 class="author"> {{ item.author }}</h3>
+          <h4 class="name" > {{ item.name_book }}</h4>
+          <p class="price">Стоимость: {{ item.price }}</p>
+          <button class="buyBook">Купить</button>
+        </li>
+      {% endfor %}
+    </ul>
+</div>
+</body>
+</html>
