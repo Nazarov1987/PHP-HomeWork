@@ -38,8 +38,9 @@
 }
 
 .fon {
-	background-image: url(../img/main_start.jpg);
+	background-image: url(../img/start_web.jpg);
 	height: inherit;
+	margin-top: -80px;
 	padding-bottom: 50px;
 }
 
@@ -152,7 +153,7 @@
 	font-size: 24px;
 	font-weight: 700;
 	text-decoration: none;
-	color: white;
+	color: black;
 }
 
 .main {
