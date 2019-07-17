@@ -3,6 +3,8 @@
 namespace app\controllers;
 
 use app\interfaces\IRenderer;
+use app\model\Basket;
+use app\model\Authorization;
 
 abstract class Controller
 {
@@ -21,6 +23,11 @@ abstract class Controller
         $this->renderer = $renderer;
     }
 	
+	    public function actionIndex()
+    {
+        echo $this->render('index');
+    }
+	
     public function runAction($action = null)
     {
         $this->action = $action ?: $this->defaultAction;
@@ -34,7 +41,9 @@ abstract class Controller
         if ($this->useLayout) {
             return $this->renderTemplate(
                 "layouts/{$this->layout}",
-                ['content' => $this->renderTemplate($template, $params)]
+                ['content' => $this->renderTemplate($template, $params),     'count' => Basket::getCountWhere('session_id', session_id()),
+                'auth' => Authorization::isAuth(),
+                'username' => Authorization::getName()]
             );
         } else {
             return $this->renderTemplate($template, $params);

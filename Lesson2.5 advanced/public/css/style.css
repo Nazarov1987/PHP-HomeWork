@@ -1,12 +1,13 @@
 .header {
 	margin: 0 auto;
 	background-color: beige;
-	height: 100px;
+	height: inherit;
 	text-align: center;
-	padding-top: 2em;
+
 }
 
 .header a {
+	padding-top: 10px;
 	padding-right: 20px;
 	font-size: 24px;
 	font-weight: 700;
@@ -14,21 +15,31 @@
 	color: red;
 }
 
+#count{
+	color: darkcyan;
+	font-size: 24px;
+	font-weight: 700;
+}
 .fonMain {
 	background-image: url(../img/start_web2.jpg);
-	margin-top: -80px;
-	height: 430px;
+	height: 395px;
 	padding-bottom: 50px;
 }
 
 .hi {
 	padding-top: 200px;
-	padding-left: 350px;
+	padding-left: 250px;
 	font-size: 50px;
 	font-weight: 900;
 	color: azure;
 }
-
+.basket {
+	padding-top: 15px;
+	font-size: 30px;
+	font-weight: 900;
+	color: azure;
+	text-align: center;
+}
 .best {
 	padding-top: 200px;
 	padding-left: 350px;
@@ -38,9 +49,8 @@
 }
 
 .fon {
-	background-image: url(../img/start_web.jpg);
+	background-image: url(../img/start_web.JPG);
 	height: inherit;
-	margin-top: -80px;
 	padding-bottom: 50px;
 }
 
@@ -137,13 +147,20 @@
 .commentUsers h4 {
 	color: red;
 }
-
-.buyBook {
-	margin-left: 100px;
+.delete{
+	padding: 3px;
+	background-color: red;
+}
+.action {
 	padding: 3px;
 	background-color: red;
 }
 
+.action_one {
+	margin-left: 635px;
+	padding: 3px;
+	background-color: red;
+}
 .still {
 	padding: 20px 400px;
 }
@@ -158,4 +175,12 @@
 
 .main {
 	margin-top: -230px;
+}
+.authUser{
+	color: green;
+	font-size: 24px;
+	font-weight: 700;
+}
+.authForm{
+	padding: 15px 0;
 }

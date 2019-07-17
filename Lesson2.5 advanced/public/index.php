@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 require "../engine/Autoload.php";
 require "../config/config.php";
 
@@ -8,13 +8,17 @@ use app\engine\Autoload;
 use app\model\Authorization;
 use app\model\Basket;
 use app\engine\Render;
+use app\engine\Request;
 
 spl_autoload_register([new Autoload(), 'loadClass']);
 
-$controllerName = $_GET['c'] ?: 'gallery';
-$actionName = $_GET['a'];
+$request = new Request();
+
+$controllerName = $request->getControllerName() ?: 'gallery';
+$actionName = $request->getActionName();
 
 $controllerClass = CONTROLLER_NAMESPACE . ucfirst($controllerName) . "Controller";
+
 if (class_exists($controllerClass)) {
     $controller = new $controllerClass(new Render());
     $controller->runAction($actionName);
