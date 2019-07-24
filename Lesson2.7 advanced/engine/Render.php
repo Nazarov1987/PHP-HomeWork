@@ -15,7 +15,7 @@ class Render implements IRenderer
             include $fileName;
         }
         else
-            echo "404";
+            throw new \Exception("Шаблон {$template} не существует", 404);
         return ob_get_clean();
     }
 
